@@ -1,0 +1,111 @@
+.about {
+  display: flex;
+  padding: 35px;
+  gap: 60px;
+  margin: 120px 0px;
+  
+}
+
+
+.about-contact{
+  display: flex;
+  flex-direction: column;
+  height: 600px;
+  gap: 120px;
+  
+}
+.contact{
+  padding: 35px;
+  border: 1px solid #E0E0E0;
+  border-radius: 2px;
+  
+  && h3{
+    color: var(--dark-wood);
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+  }
+  && p {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    font-weight: 300;
+    color: #414141;
+    && span{
+      margin-left: 8px;
+      font-size: 1rem;
+      font-weight: 400;
+      color: var(--wood);
+    }
+  }
+}
+.skills{
+
+  && h3{
+    color: var(--dark-wood);
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 25px;
+  }
+}
+
+.about-image img {
+  width: 380px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.about-content {
+  flex: 1;
+}
+
+.section-subtitle {
+  color: var(--dark-wood);
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-size: 2.8rem;
+  color: var(--primary);
+  margin-bottom: 25px;
+}
+
+.about-description {
+  color: var(--gray);
+  line-height: 1.8;
+  margin-bottom: 35px;
+}
+
+.about-skills {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.about-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 18px;
+  background: var(--light-gray);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.about-card svg {
+  font-size: 22px;
+  color: var(--accent);
+}
+
+.about-card span {
+  color: var(--dark);
+  font-weight: 500;
+}
+
+.about-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary);
+}

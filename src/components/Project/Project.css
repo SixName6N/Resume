@@ -1,0 +1,102 @@
+/* ==========================================================================
+   src/components/Projects/Projects.css
+   ========================================================================== */
+
+.projects-section {
+  padding: 4rem 1rem;
+  width: 100%;
+}
+
+.projects-title {
+  color: var(--dark-wood);
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-align: left; /* ตามดีไซน์จัดชิดซ้าย */
+}
+
+/* Grid Layout */
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* มือถือ 1 คอลัมน์ */
+  gap: 2rem;
+}
+
+/* คอมพิวเตอร์หรือแท็บเล็ตใหญ่ แบ่ง 2 คอลัมน์ */
+@media (min-width: 768px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ตัวการ์ด */
+.project-card {
+  background: var(--white);
+  border: 1px solid var(--border); /* ขอบบางๆ */
+  border-radius: 12px;
+  overflow: hidden; /* ทำให้รูปที่อยู่ข้างในโดนตัดขอบมนตามการ์ด */
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 20px -8px rgba(0, 0, 0, 0.08);
+}
+
+/* กรอบรูปภาพ */
+.project-image-wrapper {
+  width: 100%;
+  height: 240px; /* ล็อกความสูงรูป */
+  overflow: hidden;
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* จัดการให้รูปเต็มกรอบโดยไม่เสียสัดส่วน */
+}
+
+/* พื้นที่เนื้อหา */
+.project-content {
+  padding: 1.5rem;
+  display: flex;
+  background-color: var(--light-accent);
+  flex-direction: column;
+  flex-grow: 1; /* ดันให้ tags ไปอยู่ล่างสุดเสมอถ้าความยาว text ไม่เท่ากัน */
+}
+
+.project-name {
+  color: var(--dark-wood);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+  line-height: 1.2;
+}
+
+.project-desc {
+  color: var(--gray);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0 0 1.5rem 0;
+}
+
+/* ป้าย Tag ด้านล่าง */
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: auto; /* ดันลงล่างสุดของการ์ด */
+}
+
+.project-tag {
+  background: var(--light-accent); /* สีพื้นส้มอ่อนมาก */
+  color: var(--accent); /* ตัวหนังสือสีส้ม */
+  border: 1px solid var(--light2-accent); /* ขอบสีส้มพีช */
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px; /* ขอบมนแบบแคปซูล */
+  font-family: monospace; /* ให้ฟอนต์ดูเป็นโค้ดดิ่งแบบในรูป (ถ้าไม่ชอบลบได้ครับ) */
+}

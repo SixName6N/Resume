@@ -1,0 +1,87 @@
+/* ==========================================================================
+   Profile Image Styles (Animated & Modern Shape)
+   ========================================================================== */
+
+.profile-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+  margin: 120px auto;
+  padding: 3rem; /* เพิ่มพื้นที่รอบๆ ให้เส้นหมุนได้ไม่โดนตัด */
+}
+
+/* --------------------------------------------------------------------------
+   เส้นประด้านหลัง (Animated Dashed Circles)
+   -------------------------------------------------------------------------- */
+.dashed-circle {
+  position: absolute;
+  border-radius: 50%;
+  border: 2.5px dashed var(--dark);
+  opacity: 0.25;
+  z-index: 0;
+}
+
+/* วงเล็ก: ให้หมุนทวนเข็มนาฬิกาแบบช้าๆ */
+.circle-small {
+  width: 320px;
+  height: 320px;
+  bottom: 0px;
+  left: 0px;
+  animation: spin-reverse 25s linear infinite;
+}
+
+/* วงใหญ่: ให้หมุนตามเข็มนาฬิกาช้าๆ (ช้ากว่าวงเล็กนิดนึง) */
+.circle-large {
+  width: 450px;
+  height: 450px;
+  top: -20px;
+  right: -20px;
+  animation: spin 35s linear infinite;
+}
+
+/* --------------------------------------------------------------------------
+   รูปโปรไฟล์ (Modern Shape & Floating)
+   -------------------------------------------------------------------------- */
+.floating-image {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 320px;
+  height: 430px;
+  
+  /* ปรับสัดส่วนให้เป็นแนวตั้งนิดๆ (Portrait) รูปจะดูสมาร์ทขึ้น */
+  aspect-ratio: 1 / 1.05; 
+  object-fit: cover;
+  
+  /* 🌟 เปลี่ยนรูปทรงตรงนี้! ทำมุมโค้งอสมมาตร (บนซ้าย-ล่างขวาโค้งเยอะ, ขวาบน-ซ้ายล่างโค้งน้อย) */
+  border-radius: 60px 16px 60px 16px; 
+  
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+  animation: float 5s ease-in-out infinite;
+}
+
+/* --------------------------------------------------------------------------
+   Keyframes: ชุดคำสั่ง Animation ทั้งหมด
+   -------------------------------------------------------------------------- */
+
+/* อนิเมชันลอยขึ้น-ลง */
+@keyframes float {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(-12px); }
+  100% { transform: translateY(0px); }
+}
+
+/* อนิเมชันหมุนตามเข็มนาฬิกา */
+@keyframes spin {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* อนิเมชันหมุนทวนเข็มนาฬิกา */
+@keyframes spin-reverse {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(-360deg); }
+}

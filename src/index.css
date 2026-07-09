@@ -1,0 +1,63 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+:root {
+  --white: #ffffff;
+  --dark: #1f2937;
+  --gray: #64748b;
+  --light-gray: #f8fafc;
+
+  --primary: #38bdf8;   /* สีฟ้า */
+  --accent: #f97316;    /* สีส้ม */
+  --blue:#0055FF;
+  --light-accent:#FFF8F6; 
+  --light2-accent:#F8DDD2; 
+  --dark-wood:#261812;
+  --wood:#5A4136;
+  --border: #e2e8f0;
+
+  font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+
+}
+.bg-hero,.bg-skills{
+  background-color: var(--light-accent);
+}
+.container{
+  display: flex;
+  max-width:1400px;
+  min-height:70vh;
+  margin: 0px auto;
+}
+/* ==========================================================================
+   Grand Minimalist Scroll Animation 
+   ========================================================================== */
+
+/* 1. ออกแบบท่าทางการเคลื่อนไหวระดับพรีเมียม */
+@keyframes grandMinimalReveal {
+  from {
+    opacity: 0;
+    transform: scale(1.2) translateY(50px); /* ย่อตัวลงเล็กน้อยเพื่อให้ดูมีมิติเชิงลึก */
+    filter: blur(12px);                      /* เพิ่มความฟุ้งแบบเลนส์กล้องถ่ายภาพ */
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);       /* ขยายกลับมาขนาดปกติ */
+    filter: blur(0);                         /* คมชัด 100% */
+  }
+}
+
+/* 2. สั่งเปิดระบบดักจับทุกหน้าอัตโนมัติ (ยกเว้นหน้าแรกสุด bg-hero) */
+div[class^="bg-"]:not(.bg-hero) {
+  animation: grandMinimalReveal both;
+  animation-timeline: view();
+  
+  /* เส้นโค้งความเร็วแบบพิเศษ (Ease-Out Expo) 
+     มันจะดีดตัวขึ้นมาอย่างรวดเร็วฉับไวในตอนแรก แล้วค่อยๆ สโลว์ดาวน์จังหวะสุดท้ายอย่างนุ่มนวลที่สุด */
+  animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1); 
+  
+  /* ปรับระยะให้แอนิเมชันเล่นเสร็จไวขึ้น 
+     คนดูจะได้ไม่ต้องเลื่อนไปลึกเกินไปถึงจะเห็นข้อความครับ */
+  animation-range: entry 5% cover 25%; 
+}
