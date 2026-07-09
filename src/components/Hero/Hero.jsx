@@ -10,7 +10,7 @@ function Hero() {
             Hello, I'm
           </p>
           <h1 className="hero-title">
-            PHROMAMORN PHONGPRASROED
+            PHROMAMORN PHONGPRASROED ฟหดฟหดฟหดฟด
           </h1>
           <h2 style={{color:"var(--accent)",fontSize:"22px"}}>
             Full-Stack Developer • Seeking Internship Opportunities
