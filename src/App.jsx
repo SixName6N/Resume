@@ -30,21 +30,21 @@ function App() {
         </div>
       </div>
 
-      <div className="bg-about scroll-reveal">
+      <div className="bg-about">
         <div className="container">
           <About/>
         </div>
       </div>
 
-      <div className="bg-skills scroll-reveal">
+      <div className="bg-skills">
         <div className="container">
           <Skills/>
         </div>
       </div>
       
-      <div className="bg-project scroll-reveal">
+      <div className="bg-project">
         <div className="container">
-          <Project/>
+          {/* <Project/> */}
         </div>
       </div>
 
@@ -59,5 +59,4 @@ function App() {
   )
     
 }
-
 export default App
