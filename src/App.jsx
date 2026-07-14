@@ -7,8 +7,8 @@ import Navbar from './components/Navbar/Navbar'
 import Hero from './components/Hero/Hero'
 import About from './components/About/About'
 import Skills from './components/Skills/Skills'
-import Project from './components/Project/Project'
 import ProfileImage from './components/Profile/ProfileImage'
+import Footer from './components/Footer/Footer'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -23,39 +23,33 @@ function App() {
   return (
       <div>
         <Navbar/>
-      <div className="bg-hero ">
-        <div className="container ">
-          <Hero/>
-          <ProfileImage/>
+        <div className="bg-hero ">
+          <div className="container ">
+            <Hero/>
+            <ProfileImage/>
+          </div>
         </div>
-      </div>
 
-      <div className="bg-about">
-        <div className="container">
-          <About/>
+        <div className="bg-about">
+          <div className="container">
+            <About/>
+          </div>
         </div>
-      </div>
 
-      <div className="bg-skills">
-        <div className="container">
-          <Skills/>
+        <div className="bg-skills">
+          <div className="container">
+            <Skills/>
+          </div>
         </div>
-      </div>
-      
-      <div className="bg-project">
-        <div className="container">
-          {/* <Project/> */}
-        </div>
+  
+          <Footer/>
+
       </div>
 
         
       
-        {/* <Skills/> */}
-        {/* <h1 style={{border:'solid 1px black', textAlign:'center', width:'400px'}}>Test React JS</h1>
-        <p>{name}</p>
-        <img src={user.imgPic} width="500px" alt="" />
-        <MyButton/> */}
-      </div>
+       
+    
   )
     
 }

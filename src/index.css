@@ -32,6 +32,11 @@
 .container{
   display: flex;
   max-width:1400px;
-  min-height:70vh;
   margin: 0px auto;
+}
+@media (max-width: 992px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
 }

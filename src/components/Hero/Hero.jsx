@@ -3,39 +3,41 @@ import "./Hero.css";
 function Hero() {
   return (
     <section className="hero">
-
       <div className="hero-content">
+        <p className="hero-subtitle">Hello, I'm</p>
 
-          <p className="hero-subtitle">
-            Hello, I'm
-          </p>
-          <h1 className="hero-title">
-            PHROMAMORN PHONGPRASROED
-          </h1>
-          <h2 style={{color:"var(--accent)",fontSize:"22px"}}>
-            Full-Stack Developer • Seeking Internship Opportunities
-          </h2>
-          <p className="hero-description">
-              An Information Technology student passionate about Full-Stack Development, creating responsive web applications with intuitive UI/UX and scalable backend systems.
-          </p>
+        <h1 className="hero-title">
+          PHROMAMORN PHONGPRASROED
+        </h1>
 
-          <div className="hero-buttons">
-            <a href="#contact" className="">
-              <button className="btn-primary">
-                <p>Get in Touch</p>
-              </button>
-            </a>
+        {/* ย้าย Style ไปไว้ใน CSS เพื่อให้ทำ Responsive ได้ */}
+        <h2 className="hero-tagline">
+          Full-Stack Developer • Seeking Internship Opportunities
+        </h2>
 
-            <a href="#projects" className="">
-              <button className="btn-secondary">
-                <p>View Work</p>
-              </button>
-            </a>
-          </div>
+        <p className="hero-description">
+          An Information Technology student passionate about Full-Stack Development,
+          creating responsive web applications with intuitive UI/UX and scalable backend systems.
+        </p>
+
+        <div className="hero-buttons">
+          <a href="#contact" className="btn btn-primary">
+            Get in Touch
+          </a>
+
+          <a
+            href="https://github.com/SixName6N"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-secondary"
+            
+          >
+            My GitHub
+          </a>
+          <h2 id="about"></h2>
+          <h2 id="contact"></h2>
+        </div>
       </div>
-
-      
-
     </section>
   );
 }

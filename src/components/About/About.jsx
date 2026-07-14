@@ -20,7 +20,8 @@ import "./ExperienceTimeline.css"
 
 function About() {
   return (
-    <section className="about container" id="about">
+    <section className="about container" >
+      <h2></h2>
       <div className="about-contact">
 
         <div className="contact">
@@ -83,6 +84,8 @@ function About() {
           </div>
         </div>
 
+        <div id="experience"></div>
+        
         <div className="exp-timeline">
 
             <h2 className="exp-timeline__title">Internship Experience</h2>
@@ -128,7 +131,7 @@ function About() {
 
         </div>
         
-        
+        <div id="skills"></div>
 
       
       </div>
