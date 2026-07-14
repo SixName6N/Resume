@@ -1,43 +1,36 @@
-/* ==========================================================================
-   Skills Section Styles
-   ========================================================================== */
-
 .skills-section {
-  padding: 3rem 1rem;
+  padding: 120px 35px;
   width: 100%;
-  height: auto;
-  
+  box-sizing: border-box;
 }
 
-/* Header ส่วนหัว */
 .skills-header {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
 }
 
 .skills-sub-title {
   color: var(--accent);
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 500;
   letter-spacing: 1px;
   display: block;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.5rem;
 }
 
 .skills-main-title {
   color: var(--dark-wood);
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   font-weight: 700;
   margin: 0 0 0.5rem 0;
 }
 
 .skills-desc {
   color: var(--gray);
-  font-size: 0.95rem;
+  font-size: 1rem;
   margin: 0;
 }
 
-/* Filters ปุ่มตัวกรอง */
 .skills-filters {
   display: flex;
   justify-content: center;
@@ -50,7 +43,7 @@
   background: var(--white);
   color: var(--dark-wood);
   border: 1px solid var(--border);
-  padding: 0.5rem 1.5rem;
+  padding: 0.6rem 1.6rem;
   border-radius: 20px;
   font-size: 0.9rem;
   font-weight: 500;
@@ -69,44 +62,23 @@
   border-color: var(--accent);
 }
 
-/* Grid Layout สำหรับการ์ด */
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(1, ifr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
+  width: 100%;
 }
 
-/* Responsive Grid */
-@media (min-width: 640px) {
-  .skills-grid { grid-template-columns: repeat(2, 1fr); }
-  
-}
-
-@media (min-width: 1024px) {
-  .skills-grid { grid-template-columns: repeat(3, 1fr); }
-}
-/* @media (max-width: 1024px) {
-  .skills-section{
-    height: 2500px;
-  }
-}
-@media (max-width: 720px) {
-  .skills-section{
-    height: 4000px;
-  }
-} */
-
-/* Skill Card ตัวการ์ด */
 .skill-card {
   background: var(--white);
-  border: 1px solid #f3f4f6; /* ไลน์ขอบบางๆ แบบในรูป */
+  border: 1px solid #f3f4f6;
   border-radius: 4px;
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   min-height: 160px;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.01), 0 2px 4px -1px rgba(0, 0, 0, 0.01); /* เงาบางมากๆ */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.01), 0 2px 4px -1px rgba(0, 0, 0, 0.01);
 }
 
 .card-top {
@@ -124,18 +96,16 @@
   line-height: 1.3;
 }
 
-/* Badges ป้ายกำกับประเภท */
 .skill-badge {
   font-size: 0.75rem;
   font-weight: 600;
   padding: 0.25rem 0.5rem;
   border-radius: 4px;
-  background: rgba(0, 85, 255, 0.08); /* ใช้สีน้ำเงินของคุณแบบโปร่งแสง */
+  background: rgba(0, 85, 255, 0.08);
   color: var(--blue);
   white-space: nowrap;
 }
 
-/* ส่วนของ Progress Bar ด้านล่างการ์ด */
 .card-bottom {
   margin-top: auto;
 }
@@ -151,14 +121,49 @@
 .progress-bar-container {
   width: 100%;
   height: 4px;
-  background-color: var(--light-accent); /* สีพื้นหลังหลอดส้มอ่อนมากๆ */
+  background-color: var(--light-accent);
   border-radius: 2px;
   overflow: hidden;
 }
 
 .progress-bar-fill {
   height: 100%;
-  background-color: var(--accent); /* สีส้มวิ่งตามเปอร์เซ็นต์ */
+  background-color: var(--accent);
   border-radius: 2px;
   transition: width 0.4s ease-in-out;
+}
+
+@media (max-width: 992px) {
+  .skills-section {
+    padding: 60px 24px;
+  }
+
+  .skills-main-title {
+    font-size: 2.2rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .skills-main-title {
+    font-size: 1.8rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+
+  .skills-filters {
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .filter-btn {
+    padding: 0.5rem 1.2rem;
+    font-size: 0.85rem;
+  }
 }
